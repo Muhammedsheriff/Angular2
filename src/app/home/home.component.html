@@ -1,0 +1,21 @@
+
+
+<div class="container text-center">
+
+    <input class="text" class="form-control mb-5" [(ngModel)]='term'/>
+
+  <div class="row">
+
+    
+        <div  *ngFor="let n of news|searchTitle:term" class="col-md-4">
+          <div *ngIf="n.urlToImage != null"  >
+        
+          <a href="{{n.url}}">
+          <h5>{{n.title}}</h5>
+          <img class="img-fluid" src="{{n.urlToImage}}"/>
+        </a>
+      </div>
+
+        </div>
+  </div>
+</div>
